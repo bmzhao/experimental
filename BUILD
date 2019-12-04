@@ -4,6 +4,8 @@ load("@rules_cc//examples:experimental_cc_shared_library.bzl", "cc_shared_librar
 cc_library(
     name = "a",
     srcs = ["a.cc"],
+    # linked_statically_by = ["//:a_so"],
+    linked_statically_by = [":a_so"],
 )
 
 cc_shared_library(
